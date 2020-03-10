@@ -1,12 +1,8 @@
 const mongoose = require('mongoose')
-const options = new mongoose.Schema({
-    answer: String,
-    value: Boolean
-})
 
 const model = new mongoose.Schema({
     question: String,
-    answers: [options]
+    answers: []
 })
 
 module.exports = mongoose.model('quiz', model)
