@@ -1,0 +1,20 @@
+{
+  "name": "quizzies",
+  "version": "1.0.0",
+  "description": "A quizes api using node.js and mongodb",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon",
+    "prod": "node app.js"
+  },
+  "author": "Linus Muema",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.4",
+    "nodemon": "^2.0.2",
+    "promise": "^8.1.0",
+    "pug": "^2.0.4"
+  }
+}
