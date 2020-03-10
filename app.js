@@ -9,7 +9,7 @@ const dbURI = "mongodb://localhost/quizes"
 
 //Application config
 app.use(express.json())
-app.use('quizes', route)
+app.use('/quizes', route)
 app.listen(process.env.PORT || 2400, (req, res) => {
     console.log('Server started : 2400')
 })
