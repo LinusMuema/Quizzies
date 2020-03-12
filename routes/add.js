@@ -19,7 +19,7 @@ router.post('/', parser, (req, res) => {
         question: question,
         answers: answers
     }).save()
-    .then((response) => {res.json({message: 'success', quiz: response})})
+    .then((response) => {res.render('success')})
     .catch((err) => {res.status(400).json({message: 'error', err})})
 })
 
