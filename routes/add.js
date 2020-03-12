@@ -10,13 +10,11 @@ router.get('/', (req, res) =>{
 
 router.post('/', parser, (req, res) => {
     let question = req.body.question;
-    let option_one = `{"option":"${req.body.option_one}", "value":${(req.body.answer_one == 'true')}}`
-    let option_two = `{"option":"${req.body.option_two}", "value":${(req.body.answer_two == 'true')}}`
-    let option_three = `{"option":"${req.body.option_three}", "value":${(req.body.answer_three == 'true')}}`
-    let option_four = `{"option":"${req.body.option_four}", "value":${(req.body.answer_four == 'true')}}`
-    let answers = JSON.parse(`{"answers" : [${option_one}, ${option_two}, ${option_three}, ${option_four}]}`)
-    console.log(answers)
-    console.log(answers)
+    let option_one = JSON.parse(`{"option":"${req.body.option_one}", "value":${(req.body.answer_one == 'true')}}`)
+    let option_two = JSON.parse(`{"option":"${req.body.option_two}", "value":${(req.body.answer_two == 'true')}}`)
+    let option_three = JSON.parse(`{"option":"${req.body.option_three}", "value":${(req.body.answer_three == 'true')}}`)
+    let option_four = JSON.parse(`{"option":"${req.body.option_four}", "value":${(req.body.answer_four == 'true')}}`)
+    let answers = [option_one, option_two, option_three, option_four]
     let quiz = new quizes({
         question: question,
         answers: answers
