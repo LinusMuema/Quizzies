@@ -7,6 +7,9 @@
     "start": "nodemon",
     "prod": "node app.js"
   },
+  "keywords": [
+    "heroku"
+  ],
   "author": "Linus Muema",
   "license": "MIT",
   "dependencies": {
@@ -17,5 +20,8 @@
     "nodemon": "^2.0.2",
     "promise": "^8.1.0",
     "pug": "^2.0.4"
+  },
+  "engines": {
+    "node":"12.x"
   }
 }
