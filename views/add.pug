@@ -1,62 +1,57 @@
 extends layout
 
 block content
-  div(style='height: 100vh')
-    .d-flex.justify-content-center.align-items-center.h-100
-      .container
-        .row
-          .col-md-12
-            form(method='POST', action='/add')
-              p.h5.text-center.mb-4 Add a new question
-              .md-form
-                input#question.form-control(type='text' required='' name='question')
-                label(for='question') Enter the question
-              .form-row
-                .col
-                  .md-form
-                    input#option_one.form-control(type='text' required='' name='option_one')
-                    label(for='option_one') First option
-                .col
-                  .md-form
-                    select#answer_one.mdb-select(name='answer_one')
-                      option(value='' disabled='') Correct answer?
-                      option(value='true') True
-                      option(value='false' selected='') False
-              .form-row
-                .col
-                  .md-form
-                    input#option_two.form-control(type='text' required='' name='option_two')
-                    label(for='option_two') Second option
-                .col
-                  .md-form
-                    select#answer_two.mdb-select(name='answer_two')
-                      option(value='' disabled='') Correct answer?
-                      option(value='true') True
-                      option(value='false' selected='') False
-              .form-row
-                .col
-                  .md-form
-                    input#option_three.form-control(type='text' required='' name='option_three')
-                    label(for='option_three') Third option
-                .col
-                  .md-form
-                    select#answer_three.mdb-select(name='answer_three')
-                      option(value='' disabled='') Correct answer?
-                      option(value='true') True
-                      option(value='false' selected='') False
-              .form-row
-                .col
-                  .md-form
-                    input#option_four.form-control(type='text' required='' name='option_four')
-                    label(for='option_four') Fourth option
-                .col
-                  .md-form
-                    select#answer_four.mdb-select(name='answer_four')
-                      option(value='' disabled='') Correct answer?
-                      option(value='true') True
-                      option(value='false' selected='') False
-              .text-center
-                button.btn.btn-info.waves-light(type='submit') Submit
+  form(method='POST', action='/add')
+    p.h5.text-center.mb-4 Add a new question
+    .md-form
+      input#question.form-control(type='text' required='' name='question')
+      label(for='question') Enter the question
+    .form-row
+      .col
+        .md-form
+          input#option_one.form-control(type='text' required='' name='option_one')
+          label(for='option_one') First option
+      .col
+        .md-form
+          select#answer_one.mdb-select(name='answer_one')
+            option(value='' disabled='') Correct answer?
+            option(value='true') True
+            option(value='false' selected='') False
+    .form-row
+      .col
+        .md-form
+          input#option_two.form-control(type='text' required='' name='option_two')
+          label(for='option_two') Second option
+      .col
+        .md-form
+          select#answer_two.mdb-select(name='answer_two')
+            option(value='' disabled='') Correct answer?
+            option(value='true') True
+            option(value='false' selected='') False
+    .form-row
+      .col
+        .md-form
+          input#option_three.form-control(type='text' required='' name='option_three')
+          label(for='option_three') Third option
+      .col
+        .md-form
+          select#answer_three.mdb-select(name='answer_three')
+            option(value='' disabled='') Correct answer?
+            option(value='true') True
+            option(value='false' selected='') False
+    .form-row
+      .col
+        .md-form
+          input#option_four.form-control(type='text' required='' name='option_four')
+          label(for='option_four') Fourth option
+      .col
+        .md-form
+          select#answer_four.mdb-select(name='answer_four')
+            option(value='' disabled='') Correct answer?
+            option(value='true') True
+            option(value='false' selected='') False
+    .text-center
+      button.btn.btn-info.waves-light(type='submit') Submit
 
 
     

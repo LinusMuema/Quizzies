@@ -5,7 +5,12 @@ link(href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bo
 link(href='https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.14.0/css/mdb.min.css' rel='stylesheet')
 link(rel='stylesheet', href='css/style.css')
 body.container
-    block content
+    div(style='height: 100vh')
+        .d-flex.justify-content-center.align-items-center.h-100
+            .container
+                .row
+                    .col-md-12.text-center
+                        block content
     script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
     script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js')
     script(type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js')

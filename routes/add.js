@@ -15,7 +15,12 @@ router.post('/', parser, (req, res) => {
     let option_three = `{"option":${req.body.option_three}, "value":${(req.body.answer_three == 'true')}}`
     let option_four = `{"option":${req.body.option_four}, "value":${(req.body.answer_four == 'true')}}`
     let answers = [option_one, option_two, option_three, option_four]
-    console.log(question, answers)
+    let quiz = new quizes({
+        question: question,
+        answers: answers
+    }).save()
+    .then((response) => {res.json({message: 'success', quiz: response})})
+    .catch((err) => {res.status(400).json({message: 'error', err})})
 })
 
 module.exports = router
